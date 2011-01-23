@@ -25,9 +25,13 @@ static UIColor *grayColor = nil;
 #pragma mark Overridden methods
 
 - (void)drawRect:(CGRect)rectangle {
+	[[UIImage imageNamed:@"participant-left.png"] drawInRect:CGRectMake(5, 5, 40.0f, 40.0f)];
+	
+	CGSize size = [participant.twitterName sizeWithFont:nameFont];
+	[[UIImage imageNamed:@"participant-right.png"] drawInRect:CGRectMake(45, 5, size.width + 50, 40.0f)];
+	
 	[grayColor set];	
 	[participant.twitterName drawAtPoint:CGPointMake(50, 10) withFont:nameFont];
-	[[UIImage imageNamed:@"detail-participant-highlighted.png"] drawInRect:CGRectMake(5, 5, 40.0f, 30.0f)];
 }
 
 #pragma mark Personal methods
@@ -40,7 +44,7 @@ static UIColor *grayColor = nil;
 + (CGSize)sizeForParticipant:(MCParticipant *)myParticipant {
 	CGSize size = [myParticipant.twitterName sizeWithFont:nameFont];
 	size.width = size.width + 60;
-	size.height = 40;
+	size.height = 50;
 	return size;
 }
 
