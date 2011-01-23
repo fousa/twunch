@@ -99,7 +99,6 @@
 	NSEnumerator *participantsEnumerator = [participants objectEnumerator];
 	MCParticipant *participant;
 	while (participant = [participantsEnumerator nextObject]) {
-		NSLog(@"compare: %@ to %@", yourTwitterName, participant.twitterName);
 		if ([yourTwitterName compare:participant.twitterName] == NSOrderedSame) {
 			return YES;
 		}
