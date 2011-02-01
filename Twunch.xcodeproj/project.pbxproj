@@ -1006,7 +1006,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jelle Vandebeeck (DR39Q8437E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jelle Vandebeeck";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1019,7 +1019,7 @@
 					"\"$(SRCROOT)/Frameworks/Twitter+OAuth/Libraries & Headers\"",
 				);
 				PRODUCT_NAME = Twunch;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EEA36B9F-ECAA-45AA-BFBD-DAEC2B5AC161";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "64B3AA81-9BDF-4A46-B964-1DFB56B24E0E";
 				SDKROOT = iphoneos4.2;
 			};
 			name = Debug;
@@ -1029,7 +1029,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jelle Vandebeeck (DR39Q8437E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jelle Vandebeeck (DR39Q8437E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jelle Vandebeeck";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Twunch_Prefix.pch;
@@ -1042,7 +1042,7 @@
 				);
 				PRODUCT_NAME = Twunch;
 				PROVISIONING_PROFILE = "EEA36B9F-ECAA-45AA-BFBD-DAEC2B5AC161";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EEA36B9F-ECAA-45AA-BFBD-DAEC2B5AC161";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "64B3AA81-9BDF-4A46-B964-1DFB56B24E0E";
 				SDKROOT = iphoneos4.2;
 			};
 			name = Release;

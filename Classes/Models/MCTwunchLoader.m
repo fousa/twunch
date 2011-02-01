@@ -74,6 +74,11 @@
 		currentTwunch.name = title;
 	}
 	
+	if([elementName isEqualToString:@"link"]) {
+		NSString *link = [currentStringValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+		currentTwunch.link = link;
+	}
+	
 	if([elementName isEqualToString:@"address"]) {
 		NSString *address = [currentStringValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 		currentTwunch.address = address;

@@ -21,6 +21,7 @@
 
 @property (nonatomic) int index;
 @property (retain) NSString *name;
+@property (retain) NSString *link;
 @property (retain) CLLocation *location;
 @property (retain) NSString *address;
 @property (retain) NSDate *date;

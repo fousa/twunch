@@ -13,6 +13,7 @@
 
 @synthesize index;
 @synthesize name;
+@synthesize link;
 @synthesize location;
 @synthesize address;
 @synthesize date;
