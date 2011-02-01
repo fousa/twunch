@@ -20,11 +20,33 @@
 	self.title = [NSString stringWithFormat:@"@%@",participant.twitterName];
 	
 	webView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+	webView.delegate = self;
 	[self setView:webView];
+	
+	refreshView = [[MCRefreshView alloc] initFromView:self.view];
+	refreshView.text = @"Loading";
+	refreshView.tag = 1001;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.twitter.com/%@", participant.twitterName]]]];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[NSThread detachNewThreadSelector:@selector(setRefreshView) toTarget:self withObject:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[[self.view.window viewWithTag:1001] removeFromSuperview];
+}
+
+- (void)setRefreshView {
+	self.navigationItem.leftBarButtonItem.enabled = NO;
+	[self.view.window addSubview:refreshView];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+	[[self.view.window viewWithTag:1001] removeFromSuperview];
 }
 
 @end
