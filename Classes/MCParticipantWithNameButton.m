@@ -28,10 +28,10 @@ static UIColor *grayColor = nil;
 	[[UIImage imageNamed:@"participant-left.png"] drawInRect:CGRectMake(5, 5, 40.0f, 40.0f)];
 	
 	CGSize size = [participant.twitterName sizeWithFont:nameFont];
-	[[UIImage imageNamed:@"participant-right.png"] drawInRect:CGRectMake(45, 5, size.width + 50, 40.0f)];
+	[[UIImage imageNamed:@"participant-right.png"] drawInRect:CGRectMake(45, 5, size.width + 15, 40.0f)];
 	
 	[grayColor set];	
-	[participant.twitterName drawAtPoint:CGPointMake(50, 10) withFont:nameFont];
+	[participant.twitterName drawAtPoint:CGPointMake(50, 12) withFont:nameFont];
 }
 
 #pragma mark Personal methods
