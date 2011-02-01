@@ -55,6 +55,7 @@
 		60C67CF412C3BA6400B69C00 /* SA_OAuthTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C67CE012C3BA6400B69C00 /* SA_OAuthTwitterEngine.m */; };
 		60C67CF512C3BA6400B69C00 /* twitter_load.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C67CE112C3BA6400B69C00 /* twitter_load.png */; };
 		60C8289A10380157009ED6F1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C8289910380157009ED6F1 /* CoreLocation.framework */; };
+		60E5267412F87D3100199AED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E5267312F87D3100199AED /* Default.png */; };
 		F40BFAF91038AC9600F227F7 /* overview-cell-left-0-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = F40BFAA71038AC9600F227F7 /* overview-cell-left-0-highlighted.png */; };
 		F40BFAFA1038AC9600F227F7 /* overview-cell-left-0.png in Resources */ = {isa = PBXBuildFile; fileRef = F40BFAA81038AC9600F227F7 /* overview-cell-left-0.png */; };
 		F40BFAFB1038AC9600F227F7 /* overview-cell-left-1-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = F40BFAA91038AC9600F227F7 /* overview-cell-left-1-highlighted.png */; };
@@ -280,6 +281,7 @@
 		60C67CE012C3BA6400B69C00 /* SA_OAuthTwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SA_OAuthTwitterEngine.m; sourceTree = "<group>"; };
 		60C67CE112C3BA6400B69C00 /* twitter_load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_load.png; sourceTree = "<group>"; };
 		60C8289910380157009ED6F1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		60E5267312F87D3100199AED /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Twunch-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Twunch-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		F40BFAA71038AC9600F227F7 /* overview-cell-left-0-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "overview-cell-left-0-highlighted.png"; path = "Images/overview-cell-left-0-highlighted.png"; sourceTree = "<group>"; };
 		F40BFAA81038AC9600F227F7 /* overview-cell-left-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "overview-cell-left-0.png"; path = "Images/overview-cell-left-0.png"; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60E5267312F87D3100199AED /* Default.png */,
 				6014B38612C3EC340084A759 /* Icon.png */,
 				60C67CA612C3BA6400B69C00 /* Twitter+OAuth */,
 				608C24A71028D4AB00F25BFE /* Images */,
@@ -950,6 +953,7 @@
 				60C67CE312C3BA6400B69C00 /* jQueryInjectLandscape.txt in Resources */,
 				60C67CF512C3BA6400B69C00 /* twitter_load.png in Resources */,
 				6014B38712C3EC340084A759 /* Icon.png in Resources */,
+				60E5267412F87D3100199AED /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
