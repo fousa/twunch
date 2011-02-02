@@ -17,8 +17,6 @@
 - (void)loadView {
 	[super loadView];
 	
-	self.title = [NSString stringWithFormat:@"@%@",participant.twitterName];
-	
 	webView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
 	webView.delegate = self;
 	[self setView:webView];
@@ -29,6 +27,8 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+	self.title = [NSString stringWithFormat:@"@%@",participant.twitterName];
+	
 	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.twitter.com/%@", participant.twitterName]]]];
 }
 
