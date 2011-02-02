@@ -145,7 +145,7 @@
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser
 {
-	[delegate performSelector:selector withObject:[twunches retain]];
+	[delegate performSelector:selector withObject:[[[twunches reverseObjectEnumerator] allObjects] retain]];
 }
 
 @end

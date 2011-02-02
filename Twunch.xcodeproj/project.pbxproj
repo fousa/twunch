@@ -1010,7 +1010,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jelle Vandebeeck";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jelle Vandebeeck (DR39Q8437E)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1023,7 +1023,7 @@
 					"\"$(SRCROOT)/Frameworks/Twitter+OAuth/Libraries & Headers\"",
 				);
 				PRODUCT_NAME = Twunch;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "64B3AA81-9BDF-4A46-B964-1DFB56B24E0E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CADE788B-EB07-43AD-9B4B-D10AD8141DB4";
 				SDKROOT = iphoneos4.2;
 			};
 			name = Debug;
