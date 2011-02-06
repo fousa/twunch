@@ -30,8 +30,6 @@
 	
 	twunches = [[NSMutableArray array] retain];
 	
-	
-	
 	self.locationManager = [[[CLLocationManager alloc] init] autorelease];
 	if ([CLLocationManager locationServicesEnabled]) {
 		self.locationManager.delegate = self;
@@ -168,7 +166,7 @@
 	}
 	[self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
 	showNearbyTwunches = !showNearbyTwunches;
-	self.navigationItem.leftBarButtonItem.style = showNearbyTwunches ? UIBarButtonItemStyleDone : UIBarButtonItemStylePlain;
+	self.navigationItem.leftBarButtonItem.style = showNearbyTwunches ? UIBarButtonItemStylePlain : UIBarButtonItemStyleDone;
 }
 
 @end
