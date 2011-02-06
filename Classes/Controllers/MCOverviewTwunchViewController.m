@@ -22,29 +22,42 @@
 
 #pragma mark Overridden methods
 
+#pragma mark -
+#pragma mark Initializers
+
+- (id)init {
+	if (!(self = [super init])) return nil;
+	
+	twunches = [[NSMutableArray array] retain];
+	
+	
+	
+	self.locationManager = [[[CLLocationManager alloc] init] autorelease];
+	if ([CLLocationManager locationServicesEnabled]) {
+		self.locationManager.delegate = self;
+		self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+		[self.locationManager startUpdatingLocation];
+	}
+	
+	return self;
+}
+
 - (void)loadView {
-	self.title = @"Twunches";	
+	self.title = @"Twunches";
 	showNearbyTwunches = YES;
 	locationFound = NO;
 	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:.373 green:.208 blue:.09 alpha:1.0];
 	
-	/*UIImageView *navigationBarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-	[navigationBarImageView setImage:[UIImage imageNamed:@"background.png"]];
-	[self.navigationController.navigationBar insertSubview:navigationBarImageView atIndex:0];
-	[navigationBarImageView release];*/
-	
-	// Add refresh button
 	UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshTwunches)];
 	self.navigationItem.rightBarButtonItem = refreshButton;
 	[refreshButton release];
 	
-	//UIBarButtonItem *localizeButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(showNearbyTwunchesAction)];
-	// TODO Maybe we can use initWithImage:style:target:action: for a custom image?
 	UIBarButtonItem *localizeButton = [[UIBarButtonItem alloc] initWithTitle:@"Nearby" style:UIBarButtonItemStylePlain target:self action:@selector(showNearbyTwunchesAction)];
+	localizeButton.tag = 2001;
 	self.navigationItem.leftBarButtonItem = localizeButton;
 	self.navigationItem.leftBarButtonItem.enabled = NO;
 	[localizeButton release];
-
+	
 	[super loadView];
 	
 	refreshView = [[MCRefreshView alloc] initFromView:self.tableView];
@@ -65,15 +78,6 @@
 	loader.delegate = self;
 	loader.selector = @selector(fillTableWithTwunches:);
 	[loader loadXML];
-}
-
-- (void)viewDidLoad {
-	self.locationManager = [[[CLLocationManager alloc] init] autorelease];
-	if ([CLLocationManager locationServicesEnabled]) {
-		self.locationManager.delegate = self;
-		self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
-		[self.locationManager startUpdatingLocation];
-	}
 }
 
 #pragma mark Delegation methods for the UITableViewController
@@ -128,7 +132,6 @@
 - (void)refreshTwunches {
 	showNearbyTwunches = YES;
 	locationFound = NO;
-	[NSThread detachNewThreadSelector:@selector(setRefreshView) toTarget:self withObject:nil];
 	
 	MCTwunchLoader *loader = [[MCTwunchLoader alloc] init];
 	loader.delegate = self;
@@ -138,13 +141,13 @@
 
 - (void)fillTableWithTwunches:(NSMutableArray *)loadedTwunches {
 	twunches = loadedTwunches;
-	allTwunches = loadedTwunches;
+	allTwunches = [loadedTwunches copy];
 	[self.tableView reloadData];
 }
 
 - (void)refreshTableWithTwunches:(NSMutableArray *)loadedTwunches {
 	twunches = loadedTwunches;
-	allTwunches = loadedTwunches;
+	allTwunches = [loadedTwunches copy];
 	[self.tableView reloadData];
 	[self.tableView scrollRectToVisible:CGRectMake(0, 0, 320, 100) animated:YES];
 	[[self.tableView.window viewWithTag:1000] removeFromSuperview];
@@ -157,38 +160,15 @@
 }
 
 - (void)showNearbyTwunchesAction {
-	if (showNearbyTwunches) {
-		NSMutableArray *pastTwunchesIndexes = [NSMutableArray array];
-		NSEnumerator *twunchEnumerator = [allTwunches objectEnumerator];
-		NSMutableArray *newTwunchArray = [NSMutableArray array];
-		MCTwunch *twunch;
-		while (twunch = [twunchEnumerator nextObject]) {
-			if (![twunch nearbyTwunch:currentLocation]) {
-				[pastTwunchesIndexes addObject:[NSIndexPath indexPathForRow:[twunches indexOfObject:twunch] inSection:0]];
-			} else {
-				[newTwunchArray addObject:twunch];
-			}
+	[twunches removeAllObjects];
+	for (MCTwunch *twunch in allTwunches) {
+		if (!showNearbyTwunches || [twunch nearbyTwunch:currentLocation]) {
+			[twunches addObject:twunch];
 		}
-		[self.tableView beginUpdates];
-		twunches = [newTwunchArray retain];
-		[self.tableView deleteRowsAtIndexPaths:pastTwunchesIndexes withRowAnimation:UITableViewRowAnimationFade];
-		[self.tableView endUpdates];
-		showNearbyTwunches = NO;
-	} else {
-		NSMutableArray *pastTwunchesIndexes = [NSMutableArray array];
-		NSEnumerator *twunchEnumerator = [allTwunches objectEnumerator];
-		[self.tableView beginUpdates];
-		MCTwunch *twunch;
-		while (twunch = [twunchEnumerator nextObject]) {
-			if (![twunch nearbyTwunch:currentLocation]) {
-				[twunches insertObject:twunch atIndex:twunch.index];
-				[pastTwunchesIndexes addObject:[NSIndexPath indexPathForRow:twunch.index inSection:0]];
-			}
-		}
-		[self.tableView insertRowsAtIndexPaths:pastTwunchesIndexes withRowAnimation:UITableViewRowAnimationFade];
-		[self.tableView endUpdates];
-		showNearbyTwunches = YES;
 	}
+	[self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+	showNearbyTwunches = !showNearbyTwunches;
+	self.navigationItem.leftBarButtonItem.style = showNearbyTwunches ? UIBarButtonItemStyleDone : UIBarButtonItemStylePlain;
 }
 
 @end
