@@ -184,6 +184,8 @@ static NSString* const kGGTwitterLoadingBackgroundImage = @"twitter_load.png";
 	
 	UINavigationItem				*navItem = [[[UINavigationItem alloc] initWithTitle: NSLocalizedString(@"Twitter Info", nil)] autorelease];
 	navItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCancel target: self action: @selector(cancel:)] autorelease];
+
+	_navBar.tintColor = [UIColor colorWithRed:.373 green:.208 blue:.09 alpha:1.0];
 	
 	[_navBar pushNavigationItem: navItem animated: NO];
 	[self locateAuthPinInWebView: nil];
