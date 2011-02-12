@@ -40,15 +40,20 @@
 	return self;
 }
 
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	[self.refreshHeaderView setCurrentDate];
+}
+
 - (void)loadView {
 	self.title = @"Twunches";
 	showNearbyTwunches = YES;
 	locationFound = NO;
 	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:.373 green:.208 blue:.09 alpha:1.0];
 	
-	UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshTwunches)];
-	self.navigationItem.rightBarButtonItem = refreshButton;
-	[refreshButton release];
+//	UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshTwunches)];
+//	self.navigationItem.rightBarButtonItem = refreshButton;
+//	[refreshButton release];
 	
 	UIBarButtonItem *localizeButton = [[UIBarButtonItem alloc] initWithTitle:@"Nearby" style:UIBarButtonItemStylePlain target:self action:@selector(showNearbyTwunchesAction)];
 	localizeButton.tag = 2001;
@@ -146,6 +151,8 @@
 	[self.tableView scrollRectToVisible:CGRectMake(0, 0, 320, 100) animated:YES];
 	[[self.tableView.window viewWithTag:1000] removeFromSuperview];
 	[self.locationManager startUpdatingLocation];
+	
+	[self performSelectorOnMainThread:@selector(dataSourceDidFinishLoadingNewData) withObject:nil waitUntilDone:NO];
 }
 
 - (void)showNearbyTwunchesAction {
@@ -158,6 +165,15 @@
 	[self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
 	showNearbyTwunches = !showNearbyTwunches;
 	self.navigationItem.leftBarButtonItem.style = showNearbyTwunches ? UIBarButtonItemStylePlain : UIBarButtonItemStyleDone;
+}
+
+- (void)reloadTableViewDataSource{
+	[self performSelectorInBackground:@selector(refreshTwunches) withObject:nil];
+}
+- (void)dataSourceDidFinishLoadingNewData{
+	[refreshHeaderView setCurrentDate];
+	
+	[super dataSourceDidFinishLoadingNewData];
 }
 
 @end

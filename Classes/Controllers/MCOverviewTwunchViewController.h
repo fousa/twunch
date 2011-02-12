@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "MCDetailViewController.h"
 #import "SA_OAuthTwitterController.h"
+#import "PullToRefreshTableViewController.h"
 
 @class SA_OAuthTwitterEngine;
 
-@interface MCOverviewTwunchViewController : UITableViewController <CLLocationManagerDelegate> {
+@interface MCOverviewTwunchViewController : PullToRefreshTableViewController <CLLocationManagerDelegate> {
 	MCDetailViewController *detailController;
 	
 	NSMutableArray *twunches;

@@ -35,6 +35,7 @@
 		609BD74A1306C37A002BA75A /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 609BD7461306C37A002BA75A /* blueArrow.png */; };
 		609BD74B1306C37A002BA75A /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 609BD7471306C37A002BA75A /* whiteArrow.png */; };
 		609BD74E1306C3A7002BA75A /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 609BD74D1306C3A7002BA75A /* EGORefreshTableHeaderView.m */; };
+		609BD7A01306C661002BA75A /* PullToRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609BD79F1306C661002BA75A /* PullToRefreshTableViewController.m */; };
 		60B1B74B1028BCFA0015E659 /* MCOverviewTwunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1B74A1028BCFA0015E659 /* MCOverviewTwunchViewController.m */; };
 		60B1B7511028BE880015E659 /* MCTwunch.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1B7501028BE880015E659 /* MCTwunch.m */; };
 		60C67C5412C3B6ED00B69C00 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C67C5312C3B6ED00B69C00 /* QuartzCore.framework */; };
@@ -230,6 +231,8 @@
 		609BD7471306C37A002BA75A /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteArrow.png; path = Images/whiteArrow.png; sourceTree = "<group>"; };
 		609BD74C1306C3A7002BA75A /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGORefreshTableHeaderView.h; path = Components/EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		609BD74D1306C3A7002BA75A /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGORefreshTableHeaderView.m; path = Components/EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		609BD79E1306C661002BA75A /* PullToRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PullToRefreshTableViewController.h; path = Controllers/PullToRefreshTableViewController.h; sourceTree = "<group>"; };
+		609BD79F1306C661002BA75A /* PullToRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PullToRefreshTableViewController.m; path = Controllers/PullToRefreshTableViewController.m; sourceTree = "<group>"; };
 		60B1B7491028BCFA0015E659 /* MCOverviewTwunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCOverviewTwunchViewController.h; path = Controllers/MCOverviewTwunchViewController.h; sourceTree = "<group>"; };
 		60B1B74A1028BCFA0015E659 /* MCOverviewTwunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCOverviewTwunchViewController.m; path = Controllers/MCOverviewTwunchViewController.m; sourceTree = "<group>"; };
 		60B1B74F1028BE880015E659 /* MCTwunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCTwunch.h; path = Models/MCTwunch.h; sourceTree = "<group>"; };
@@ -673,6 +676,8 @@
 		60B1B7471028BCD10015E659 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				609BD79E1306C661002BA75A /* PullToRefreshTableViewController.h */,
+				609BD79F1306C661002BA75A /* PullToRefreshTableViewController.m */,
 				F4C7B9B8103DF65B00D9F9C1 /* MCParticipantsViewController.h */,
 				F4C7B9B9103DF65B00D9F9C1 /* MCParticipantsViewController.m */,
 				606629C010346D4C00C20259 /* MCWebViewController.h */,
@@ -1022,6 +1027,7 @@
 				60C67CF312C3BA6400B69C00 /* SA_OAuthTwitterController.m in Sources */,
 				60C67CF412C3BA6400B69C00 /* SA_OAuthTwitterEngine.m in Sources */,
 				609BD74E1306C3A7002BA75A /* EGORefreshTableHeaderView.m in Sources */,
+				609BD7A01306C661002BA75A /* PullToRefreshTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
