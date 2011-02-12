@@ -9,13 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "MCDetailViewController.h"
 #import "SA_OAuthTwitterController.h"
-#import "MCRefreshView.h"
 
 @class SA_OAuthTwitterEngine;
 
 @interface MCOverviewTwunchViewController : UITableViewController <CLLocationManagerDelegate> {
 	MCDetailViewController *detailController;
-	MCRefreshView *refreshView;
 	
 	NSMutableArray *twunches;
 	NSMutableArray *allTwunches;

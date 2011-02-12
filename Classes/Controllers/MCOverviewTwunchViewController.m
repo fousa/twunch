@@ -58,10 +58,6 @@
 	
 	[super loadView];
 	
-	refreshView = [[MCRefreshView alloc] initFromView:self.tableView];
-	refreshView.text = @"Updating";
-	refreshView.tag = 1000;
-	
 	MCOverviewTwunchTableView *tableView = [[MCOverviewTwunchTableView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame] style:UITableViewStylePlain];
 	tableView.delegate = self;
 	tableView.backgroundColor = [UIColor clearColor];
@@ -150,11 +146,6 @@
 	[self.tableView scrollRectToVisible:CGRectMake(0, 0, 320, 100) animated:YES];
 	[[self.tableView.window viewWithTag:1000] removeFromSuperview];
 	[self.locationManager startUpdatingLocation];
-}
-
-- (void)setRefreshView {
-	self.navigationItem.leftBarButtonItem.enabled = NO;
-	[self.tableView.window addSubview:refreshView];
 }
 
 - (void)showNearbyTwunchesAction {

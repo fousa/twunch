@@ -30,6 +30,11 @@
 		608C23921028CAFF00F25BFE /* MCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608C23911028CAFF00F25BFE /* MCMapViewController.m */; };
 		608C23D81028CD0E00F25BFE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 608C23D71028CD0E00F25BFE /* MapKit.framework */; };
 		608C24A61028D42000F25BFE /* MCTwunchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 608C24A51028D42000F25BFE /* MCTwunchTableViewCell.m */; };
+		609BD7481306C37A002BA75A /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 609BD7441306C37A002BA75A /* blackArrow.png */; };
+		609BD7491306C37A002BA75A /* blueArrow_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 609BD7451306C37A002BA75A /* blueArrow_new.png */; };
+		609BD74A1306C37A002BA75A /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 609BD7461306C37A002BA75A /* blueArrow.png */; };
+		609BD74B1306C37A002BA75A /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 609BD7471306C37A002BA75A /* whiteArrow.png */; };
+		609BD74E1306C3A7002BA75A /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 609BD74D1306C3A7002BA75A /* EGORefreshTableHeaderView.m */; };
 		60B1B74B1028BCFA0015E659 /* MCOverviewTwunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1B74A1028BCFA0015E659 /* MCOverviewTwunchViewController.m */; };
 		60B1B7511028BE880015E659 /* MCTwunch.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1B7501028BE880015E659 /* MCTwunch.m */; };
 		60C67C5412C3B6ED00B69C00 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C67C5312C3B6ED00B69C00 /* QuartzCore.framework */; };
@@ -219,6 +224,12 @@
 		608C23D71028CD0E00F25BFE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		608C24A41028D42000F25BFE /* MCTwunchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCTwunchTableViewCell.h; path = Components/MCTwunchTableViewCell.h; sourceTree = "<group>"; };
 		608C24A51028D42000F25BFE /* MCTwunchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCTwunchTableViewCell.m; path = Components/MCTwunchTableViewCell.m; sourceTree = "<group>"; };
+		609BD7441306C37A002BA75A /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackArrow.png; path = Images/blackArrow.png; sourceTree = "<group>"; };
+		609BD7451306C37A002BA75A /* blueArrow_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueArrow_new.png; path = Images/blueArrow_new.png; sourceTree = "<group>"; };
+		609BD7461306C37A002BA75A /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueArrow.png; path = Images/blueArrow.png; sourceTree = "<group>"; };
+		609BD7471306C37A002BA75A /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteArrow.png; path = Images/whiteArrow.png; sourceTree = "<group>"; };
+		609BD74C1306C3A7002BA75A /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGORefreshTableHeaderView.h; path = Components/EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		609BD74D1306C3A7002BA75A /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGORefreshTableHeaderView.m; path = Components/EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		60B1B7491028BCFA0015E659 /* MCOverviewTwunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCOverviewTwunchViewController.h; path = Controllers/MCOverviewTwunchViewController.h; sourceTree = "<group>"; };
 		60B1B74A1028BCFA0015E659 /* MCOverviewTwunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCOverviewTwunchViewController.m; path = Controllers/MCOverviewTwunchViewController.m; sourceTree = "<group>"; };
 		60B1B74F1028BE880015E659 /* MCTwunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCTwunch.h; path = Models/MCTwunch.h; sourceTree = "<group>"; };
@@ -520,6 +531,8 @@
 				60407DA210334C6E00690B50 /* MCSubscribeButton.m */,
 				F4631DBF103732630081E0C3 /* MCOverviewTwunchTableView.h */,
 				F4631DC0103732630081E0C3 /* MCOverviewTwunchTableView.m */,
+				609BD74C1306C3A7002BA75A /* EGORefreshTableHeaderView.h */,
+				609BD74D1306C3A7002BA75A /* EGORefreshTableHeaderView.m */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -527,6 +540,10 @@
 		608C24A71028D4AB00F25BFE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				609BD7441306C37A002BA75A /* blackArrow.png */,
+				609BD7451306C37A002BA75A /* blueArrow_new.png */,
+				609BD7461306C37A002BA75A /* blueArrow.png */,
+				609BD7471306C37A002BA75A /* whiteArrow.png */,
 				F4B47DEE1045DB2F00318DBE /* overview-cell-left-41-highlighted.png */,
 				F4B47DEF1045DB2F00318DBE /* overview-cell-left-41.png */,
 				F4B47DF01045DB2F00318DBE /* overview-cell-left-42-highlighted.png */,
@@ -954,6 +971,10 @@
 				60C67CF512C3BA6400B69C00 /* twitter_load.png in Resources */,
 				6014B38712C3EC340084A759 /* Icon.png in Resources */,
 				60E5267412F87D3100199AED /* Default.png in Resources */,
+				609BD7481306C37A002BA75A /* blackArrow.png in Resources */,
+				609BD7491306C37A002BA75A /* blueArrow_new.png in Resources */,
+				609BD74A1306C37A002BA75A /* blueArrow.png in Resources */,
+				609BD74B1306C37A002BA75A /* whiteArrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1000,6 +1021,7 @@
 				60C67CF212C3BA6400B69C00 /* NSString+UUID.m in Sources */,
 				60C67CF312C3BA6400B69C00 /* SA_OAuthTwitterController.m in Sources */,
 				60C67CF412C3BA6400B69C00 /* SA_OAuthTwitterEngine.m in Sources */,
+				609BD74E1306C3A7002BA75A /* EGORefreshTableHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
