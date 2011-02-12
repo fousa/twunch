@@ -51,9 +51,6 @@
 	locationFound = NO;
 	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:.373 green:.208 blue:.09 alpha:1.0];
 	
-//	UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshTwunches)];
-//	self.navigationItem.rightBarButtonItem = refreshButton;
-//	[refreshButton release];
 	UIBarButtonItem *locateButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"locate.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(showNearbyTwunchesAction)];
 	locateButton.tag = 2001;
 	self.navigationItem.leftBarButtonItem = locateButton;
