@@ -54,12 +54,11 @@
 //	UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshTwunches)];
 //	self.navigationItem.rightBarButtonItem = refreshButton;
 //	[refreshButton release];
-	
-	UIBarButtonItem *localizeButton = [[UIBarButtonItem alloc] initWithTitle:@"Nearby" style:UIBarButtonItemStylePlain target:self action:@selector(showNearbyTwunchesAction)];
-	localizeButton.tag = 2001;
-	self.navigationItem.leftBarButtonItem = localizeButton;
+	UIBarButtonItem *locateButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"locate.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(showNearbyTwunchesAction)];
+	locateButton.tag = 2001;
+	self.navigationItem.leftBarButtonItem = locateButton;
 	self.navigationItem.leftBarButtonItem.enabled = NO;
-	[localizeButton release];
+	[locateButton release];
 	
 	[super loadView];
 	

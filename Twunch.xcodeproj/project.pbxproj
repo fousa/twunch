@@ -33,7 +33,7 @@
 		609BD74B1306C37A002BA75A /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 609BD7471306C37A002BA75A /* whiteArrow.png */; };
 		609BD74E1306C3A7002BA75A /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 609BD74D1306C3A7002BA75A /* EGORefreshTableHeaderView.m */; };
 		609BD7A01306C661002BA75A /* PullToRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 609BD79F1306C661002BA75A /* PullToRefreshTableViewController.m */; };
-		609BD8891306D4EE002BA75A /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 609BD8881306D4EE002BA75A /* cloud.png */; };
+		609BD8B71306D9B5002BA75A /* locate.png in Resources */ = {isa = PBXBuildFile; fileRef = 609BD8B61306D9B5002BA75A /* locate.png */; };
 		60B1B74B1028BCFA0015E659 /* MCOverviewTwunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1B74A1028BCFA0015E659 /* MCOverviewTwunchViewController.m */; };
 		60B1B7511028BE880015E659 /* MCTwunch.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B1B7501028BE880015E659 /* MCTwunch.m */; };
 		60C67C5412C3B6ED00B69C00 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C67C5312C3B6ED00B69C00 /* QuartzCore.framework */; };
@@ -228,7 +228,7 @@
 		609BD74D1306C3A7002BA75A /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGORefreshTableHeaderView.m; path = Components/EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		609BD79E1306C661002BA75A /* PullToRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PullToRefreshTableViewController.h; path = Controllers/PullToRefreshTableViewController.h; sourceTree = "<group>"; };
 		609BD79F1306C661002BA75A /* PullToRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PullToRefreshTableViewController.m; path = Controllers/PullToRefreshTableViewController.m; sourceTree = "<group>"; };
-		609BD8881306D4EE002BA75A /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cloud.png; path = Images/cloud.png; sourceTree = "<group>"; };
+		609BD8B61306D9B5002BA75A /* locate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = locate.png; path = Images/locate.png; sourceTree = "<group>"; };
 		60B1B7491028BCFA0015E659 /* MCOverviewTwunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCOverviewTwunchViewController.h; path = Controllers/MCOverviewTwunchViewController.h; sourceTree = "<group>"; };
 		60B1B74A1028BCFA0015E659 /* MCOverviewTwunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCOverviewTwunchViewController.m; path = Controllers/MCOverviewTwunchViewController.m; sourceTree = "<group>"; };
 		60B1B74F1028BE880015E659 /* MCTwunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCTwunch.h; path = Models/MCTwunch.h; sourceTree = "<group>"; };
@@ -539,7 +539,7 @@
 		608C24A71028D4AB00F25BFE /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				609BD8881306D4EE002BA75A /* cloud.png */,
+				609BD8B61306D9B5002BA75A /* locate.png */,
 				609BD7471306C37A002BA75A /* whiteArrow.png */,
 				F4B47DEE1045DB2F00318DBE /* overview-cell-left-41-highlighted.png */,
 				F4B47DEF1045DB2F00318DBE /* overview-cell-left-41.png */,
@@ -971,7 +971,7 @@
 				6014B38712C3EC340084A759 /* Icon.png in Resources */,
 				60E5267412F87D3100199AED /* Default.png in Resources */,
 				609BD74B1306C37A002BA75A /* whiteArrow.png in Resources */,
-				609BD8891306D4EE002BA75A /* cloud.png in Resources */,
+				609BD8B71306D9B5002BA75A /* locate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
