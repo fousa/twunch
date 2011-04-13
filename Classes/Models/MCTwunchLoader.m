@@ -83,6 +83,11 @@
 		NSString *address = [currentStringValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 		currentTwunch.address = address;
 	}
+    
+    if([elementName isEqualToString:@"closed"]) {
+		NSString *closed = [currentStringValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+		currentTwunch.closed = [closed compare:@"true"] == NSOrderedSame;
+	}
 	
 	if([elementName isEqualToString:@"id"]) {
 		NSString *givenDate = [currentStringValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];

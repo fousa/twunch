@@ -18,6 +18,7 @@
 @synthesize address;
 @synthesize date;
 @synthesize participants;
+@synthesize closed;
 
 - (NSString *)dateRepresentation {
 	if (date == nil) {

@@ -17,6 +17,7 @@
 	CLLocation *location;
 	NSDate *date;
 	NSMutableArray *participants;
+    BOOL closed;
 }
 
 @property (nonatomic) int index;
@@ -26,6 +27,7 @@
 @property (retain) NSString *address;
 @property (retain) NSDate *date;
 @property (retain) NSMutableArray *participants;
+@property (nonatomic, assign) BOOL closed;
 - (BOOL)nearbyTwunch:(CLLocation *)location;
 
 - (NSString *)dateRepresentation;
