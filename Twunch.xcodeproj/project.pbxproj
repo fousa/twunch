@@ -23,6 +23,7 @@
 		605D592110386ECA002E11AA /* overview-cell-left-cutlery.png in Resources */ = {isa = PBXBuildFile; fileRef = 605D591D10386ECA002E11AA /* overview-cell-left-cutlery.png */; };
 		605D592210386ECA002E11AA /* overview-cell-left-cutlery-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 605D591E10386ECA002E11AA /* overview-cell-left-cutlery-highlighted.png */; };
 		606629C110346D4C00C20259 /* MCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606629BF10346D4C00C20259 /* MCWebViewController.m */; };
+		607F79391356349F00EF4728 /* twitter.plist in Resources */ = {isa = PBXBuildFile; fileRef = 607F79381356349F00EF4728 /* twitter.plist */; };
 		6084476C1045A5DD0084F94E /* MCParticipantWithNameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6084476B1045A5DD0084F94E /* MCParticipantWithNameButton.m */; };
 		6084477F1045A7FD0084F94E /* MCParticipantsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6084477E1045A7FD0084F94E /* MCParticipantsView.m */; };
 		608C22BB1028C14F00F25BFE /* MCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 608C22BA1028C14F00F25BFE /* MCDetailViewController.m */; };
@@ -210,6 +211,7 @@
 		605D591E10386ECA002E11AA /* overview-cell-left-cutlery-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "overview-cell-left-cutlery-highlighted.png"; path = "Images/overview-cell-left-cutlery-highlighted.png"; sourceTree = "<group>"; };
 		606629BF10346D4C00C20259 /* MCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCWebViewController.m; path = Controllers/MCWebViewController.m; sourceTree = "<group>"; };
 		606629C010346D4C00C20259 /* MCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCWebViewController.h; path = Controllers/MCWebViewController.h; sourceTree = "<group>"; };
+		607F79381356349F00EF4728 /* twitter.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = twitter.plist; sourceTree = "<group>"; };
 		6084476A1045A5DD0084F94E /* MCParticipantWithNameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCParticipantWithNameButton.h; sourceTree = "<group>"; };
 		6084476B1045A5DD0084F94E /* MCParticipantWithNameButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCParticipantWithNameButton.m; sourceTree = "<group>"; };
 		6084477D1045A7FD0084F94E /* MCParticipantsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCParticipantsView.h; path = Components/MCParticipantsView.h; sourceTree = "<group>"; };
@@ -489,6 +491,7 @@
 				60C67CA612C3BA6400B69C00 /* Twitter+OAuth */,
 				608C24A71028D4AB00F25BFE /* Images */,
 				8D1107310486CEB800E47090 /* Twunch-Info.plist */,
+				607F79381356349F00EF4728 /* twitter.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -972,6 +975,7 @@
 				60E5267412F87D3100199AED /* Default.png in Resources */,
 				609BD74B1306C37A002BA75A /* whiteArrow.png in Resources */,
 				609BD8B71306D9B5002BA75A /* locate.png in Resources */,
+				607F79391356349F00EF4728 /* twitter.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
