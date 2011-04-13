@@ -1044,7 +1044,7 @@
 				);
 				PRODUCT_NAME = Twunch;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CADE788B-EB07-43AD-9B4B-D10AD8141DB4";
-				SDKROOT = iphoneos4.2;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -1067,7 +1067,7 @@
 				PRODUCT_NAME = Twunch;
 				PROVISIONING_PROFILE = "EEA36B9F-ECAA-45AA-BFBD-DAEC2B5AC161";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "64B3AA81-9BDF-4A46-B964-1DFB56B24E0E";
-				SDKROOT = iphoneos4.2;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
