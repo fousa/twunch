@@ -1065,7 +1065,6 @@
 				INFOPLIST_FILE = "Twunch-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Frameworks/Libraries & Headers\"",
 					"\"$(SRCROOT)/Frameworks/Twitter+OAuth/Libraries & Headers\"",
 				);
 				PRODUCT_NAME = Twunch;
