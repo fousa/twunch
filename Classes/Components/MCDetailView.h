@@ -17,9 +17,9 @@
 	id controller;
 }
 
-@property (retain) MCTwunch *twunch;
+@property (nonatomic, retain) MCTwunch *twunch;
 @property (nonatomic) BOOL subscribed;
-@property (retain) id controller;
+@property (nonatomic, retain) id controller;
 
 - (id)initWithFrame:(CGRect)frame twunch:(MCTwunch *)myTwunch twitterName:(NSString *)myTwitterName;
 

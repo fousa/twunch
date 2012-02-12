@@ -36,8 +36,8 @@
 	pin = [[MCMapPin alloc] init];
 	loaded = NO;
 	pin.coordinate = twunch.location.coordinate;
-	pin.title = twunch.name;
-	pin.subtitle = twunch.address;
+    pin.annotation.title = twunch.name;
+	pin.annotation.subtitle = twunch.address;
 	[mapView addAnnotation:pin];
 }
 
