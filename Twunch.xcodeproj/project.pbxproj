@@ -847,6 +847,7 @@
 				GCC_PREFIX_HEADER = Twunch_Prefix.pch;
 				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
 				INFOPLIST_FILE = "Twunch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Twunch;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CADE788B-EB07-43AD-9B4B-D10AD8141DB4";
@@ -865,6 +866,7 @@
 				GCC_PREFIX_HEADER = Twunch_Prefix.pch;
 				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
 				INFOPLIST_FILE = "Twunch-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = Twunch;
 				PROVISIONING_PROFILE = "EEA36B9F-ECAA-45AA-BFBD-DAEC2B5AC161";
