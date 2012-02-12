@@ -10,12 +10,9 @@
 #import "MCMapViewController.h"
 #import "MCParticipantsViewController.h"
 #import "MCTwunch.h"
-#import "SA_OAuthTwitterController.h"
 #import "MCRefreshView.h"
 
-@class SA_OAuthTwitterEngine;
-
-@interface MCDetailViewController : UITableViewController <SA_OAuthTwitterControllerDelegate> {
+@interface MCDetailViewController : UITableViewController {
 	MCMapViewController *mapController;
 	MCParticipantsViewController *participantsController;
 	
@@ -23,8 +20,6 @@
 	
 	MCTwunch *twunch;
 	int headerHeight;
-	
-	SA_OAuthTwitterEngine *engine;
 }
 
 @property (retain) MCMapViewController *mapController;
