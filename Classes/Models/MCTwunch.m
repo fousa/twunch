@@ -98,6 +98,8 @@
 }
 
 - (BOOL)subscribed:(NSString *)yourTwitterName {
+    if (yourTwitterName == nil) return NO;
+    
 	NSEnumerator *participantsEnumerator = [participants objectEnumerator];
 	MCParticipant *participant;
 	while (participant = [participantsEnumerator nextObject]) {

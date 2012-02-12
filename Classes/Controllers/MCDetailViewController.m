@@ -6,6 +6,8 @@
 //  Creative commons milkcarton 2009. Some rights reserved.
 //
 
+#import <Twitter/Twitter.h>
+
 #import "MCDetailViewController.h"
 #import "MCDetailView.h"
 #import "MCParticipantButton.h"
@@ -30,12 +32,6 @@
 	tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView = tableView;
 	[tableView release];
-    
-//    engine = [[SA_OAuthTwitterEngine alloc] initOAuthWithDelegate:self];
-//    
-//    NSDictionary *twitter = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"twitter" ofType:@"plist"]];
-//    engine.consumerKey = [twitter valueForKey:@"consumer_key"];
-//	engine.consumerSecret = [twitter valueForKey:@"consumer_secret"];
 
 	refreshView = [[MCRefreshView alloc] initFromView:self.tableView];
 	refreshView.text = @"Subscribing";
@@ -43,7 +39,6 @@
 }
 
 - (void)dealloc {
-//	[engine release];
     [super dealloc];
 }
 
@@ -62,90 +57,12 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-//	if (![engine isAuthorized]) {
-//		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//		[defaults setObject:@"" forKey: @"authData"];
-//		[defaults setObject:@"" forKey: @"authUsername"];
-//		[defaults synchronize];
-//	}
-
 	NSString *twitterName = [[NSUserDefaults standardUserDefaults] objectForKey: @"authUsername"];
 	MCDetailView *view = [[MCDetailView alloc] initWithFrame:CGRectZero twunch:twunch twitterName:twitterName];
 	view.backgroundColor = [UIColor clearColor];
 	view.subscribed = YES;
 	view.controller = self;
 	return view;
-}
-
-//#pragma mark Methods for SA_OAuthTwitterEngineDelegate
-//
-//- (void)storeCachedTwitterOAuthData:(NSString *)data forUsername:(NSString *)username {
-//	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//	[defaults setObject:data forKey: @"authData"];
-//	[defaults synchronize];
-//}
-//
-//- (NSString *)cachedTwitterOAuthDatForUsername:(NSString *)username {
-//	NSString *cachedData = [[NSUserDefaults standardUserDefaults] objectForKey: @"authData"];
-//	return cachedData;
-//}
-
-//#pragma mark Methods for SA_OAuthTwitterControllerDelegate
-//
-//- (void)OAuthTwitterController:(SA_OAuthTwitterController *)conOtroller authenticatedWithUsername:(NSString *)username {
-//	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//	[defaults setObject:username forKey: @"authUsername"];
-//	[defaults synchronize];
-//	[engine sendUpdate:[NSString stringWithFormat:@"(%@) @twunch I'll be there! %@", twunch.name, twunch.link]];
-//}
-//
-//- (void)OAuthTwitterControllerFailed:(SA_OAuthTwitterController *)controller {
-//
-//}
-//
-//- (void)OAuthTwitterControllerCanceled:(SA_OAuthTwitterController *)controller {
-//	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//	[defaults setObject:@"" forKey: @"authData"];
-//	[defaults setObject:@"" forKey: @"authUsername"];
-//	[defaults synchronize];
-//	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed" message:@"Failed to authenticate with twitter, please try again" delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
-//	[alert show];
-//	[alert release];
-//}
-//
-//#pragma mark Methods for TwitterEngineDelegate
-//
-//- (void)requestFailed:(NSString *)requestIdentifier withError:(NSError *)error {
-//	[[self.tableView.window viewWithTag:1000] removeFromSuperview];
-//	if ([error code] == 401) {
-//		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//		[defaults setObject:@"" forKey: @"authData"];
-//		[defaults setObject:@"" forKey: @"authUsername"];
-//		[defaults synchronize];
-//		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed" message:@"Failed to authenticate with twitter, please try again" delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
-//		[alert show];
-//		[alert release];
-//	} else {
-//		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed" message:@"Failed to subscribe to this twunch, please try again" delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
-//		[alert show];
-//		[alert release];
-//	}
-//}
-//
-//- (void)requestSucceeded:(NSString *)requestIdentifier {
-//	[[self.tableView.window viewWithTag:1000] removeFromSuperview];
-//	
-//	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Subscribed" message:@"You subscribed successfully to this twunch!" delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil];
-//	[alert show];
-//	[alert release];
-//}
-
-#pragma mark Methods for UIAlertViewDelegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-	if (buttonIndex == 1) {
-		[self subscribe];
-	}
 }
 
 #pragma mark Personal methods
@@ -162,29 +79,36 @@
         [alert show];
         [alert release];
 	} else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Subscribe?" message:@"Are you sure you want to subscribe for this twunch?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:nil];
-        [alert addButtonWithTitle:@"Yes"];
-        [alert show];
-        [alert release];
+        [self subscribe];
     }
 }
 
 - (void)subscribe {
-//	if ([engine isAuthorized]) {
-//		[NSThread detachNewThreadSelector:@selector(setRefreshView) toTarget:self withObject:nil];
-//		[engine sendUpdate:[NSString stringWithFormat:@"(%@) @twunch I'll be there! %@", twunch.name, twunch.link]];
-//		return;
-//	} else {
-//		[engine requestRequestToken];
-//
-//		SA_OAuthTwitterController *controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine:engine delegate:self];
-//		if (controller) {
-//			[self presentModalViewController:controller animated:YES];
-//		} else {
-//			[NSThread detachNewThreadSelector:@selector(setRefreshView) toTarget:self withObject:nil];
-//			[engine sendUpdate:[NSString stringWithFormat:@"(%@) @twunch I'll be there! %@", twunch.name, twunch.link]];
-//		}
-//	}
+    TWTweetComposeViewController *twitter = [[TWTweetComposeViewController alloc] init];
+    
+    [twitter addURL:[NSURL URLWithString:[NSString stringWithString:twunch.link]]];
+    [twitter setInitialText:[NSString stringWithFormat:@"(%@) @twunch I'll be there!", twunch.name]];
+    
+    // Show the controller
+    [self presentModalViewController:twitter animated:YES];
+    
+    // Called when the tweet dialog has been closed
+    twitter.completionHandler = ^(TWTweetComposeViewControllerResult result) {
+        NSString *title = @"Twitter";
+        NSString *message; 
+        
+        if (result == TWTweetComposeViewControllerResultCancelled)
+            message = @"No Twunch for you...";
+        else if (result == TWTweetComposeViewControllerResultDone)
+            message = @"Subscribed to this twunch!";
+        
+        // Show alert to see how things went...
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alertView show];
+        
+        // Dismiss the controller
+        [self dismissModalViewControllerAnimated:YES];
+    };
 }
 
 - (void)goToMapView {
