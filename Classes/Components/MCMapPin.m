@@ -11,7 +11,5 @@
 @implementation MCMapPin
 
 @synthesize coordinate;
-@synthesize title;
-@synthesize subtitle;
 
 @end

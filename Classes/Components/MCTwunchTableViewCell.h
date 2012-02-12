@@ -14,7 +14,7 @@
 	CLLocation *currentLocation;
 }
 
-@property (retain) MCTwunch *twunch;
-@property (retain) CLLocation *currentLocation;
+@property (nonatomic, retain) MCTwunch *twunch;
+@property (nonatomic, retain) CLLocation *currentLocation;
 
 @end

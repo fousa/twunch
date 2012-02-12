@@ -98,13 +98,13 @@
 	MCTwunch *twunch = [twunches objectAtIndex:indexPath.row];
 	MCTwunchTableViewCell *twunchCell = (MCTwunchTableViewCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 	if (twunchCell == nil) {
-		twunchCell = [[[MCTwunchTableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:cellIdentifier] autorelease];
+		twunchCell = [[[MCTwunchTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier] autorelease];
+        twunchCell.accessoryType = UITableViewCellAccessoryNone;
+        twunchCell.selectionStyle = UITableViewCellSelectionStyleNone;
 	}
 	
 	twunchCell.twunch = twunch;
 	twunchCell.currentLocation = currentLocation;
-	twunchCell.accessoryType = UITableViewCellAccessoryNone;
-	twunchCell.selectionStyle = UITableViewCellSelectionStyleNone;
 	return twunchCell;
 }
 

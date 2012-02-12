@@ -13,6 +13,6 @@
 	MCParticipant *participant;
 }
 
-@property (retain) MCParticipant *participant;
+@property (nonatomic, retain) MCParticipant *participant;
 
 @end

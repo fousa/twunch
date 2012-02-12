@@ -13,7 +13,7 @@
 	MCTwunch *twunch;
 }
 
-@property (retain) MCTwunch *twunch;
+@property (nonatomic, retain) MCTwunch *twunch;
 
 + (CGSize)sizeForParticipantsCount:(int)count;
 

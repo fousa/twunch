@@ -15,9 +15,8 @@
 	id controller;
 }
 
-@property (retain) MCTwunch *twunch;
-@property (retain) id controller;
+@property (nonatomic, retain) MCTwunch *twunch;
+@property (nonatomic, retain) id controller;
 
 - (id)initWithFrame:(CGRect)frame twunch:(MCTwunch *)myTwunch andController:(id)controller;
-
 @end

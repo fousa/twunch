@@ -13,7 +13,7 @@
 	NSString *text;
 }
 
-@property (retain) NSString *text;
+@property (nonatomic, retain) NSString *text;
 
 - (id)initFromView:(UIView *)tableView;
 

@@ -11,12 +11,7 @@
 
 @interface MCMapPin : MKPinAnnotationView <MKAnnotation> {
 	CLLocationCoordinate2D coordinate;
-	NSString *title;
-	NSString *subtitle;
 }
 
 @property (nonatomic) CLLocationCoordinate2D coordinate;
-@property (retain, readwrite) NSString *title;
-@property (retain, readwrite) NSString *subtitle;
-
 @end
